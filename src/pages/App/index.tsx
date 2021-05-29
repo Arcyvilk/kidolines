@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Redirect,
 } from 'react-router-dom';
+import WebFont from 'webfontloader';
 import styled from 'styled-components';
 import LandingPage from '../LandingPage';
 
@@ -19,6 +20,14 @@ const MainWrapper = styled.div`
 `;
 
 export default function App(): JSX.Element {
+  useEffect(() => {
+    WebFont.load({
+      google: {
+        families: ['Mountains of Christmas', 'Raleway'],
+      },
+    });
+  }, []);
+
   return (
     <Router>
       <Switch>
