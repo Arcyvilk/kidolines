@@ -1,5 +1,12 @@
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from 'react-router-dom';
 import styled from 'styled-components';
+import LandingPage from '../LandingPage';
 
 const MainWrapper = styled.div`
   display: flex;
@@ -12,5 +19,18 @@ const MainWrapper = styled.div`
 `;
 
 export default function App(): JSX.Element {
-  return <MainWrapper>(((o(*ﾟ▽ﾟ*)o)))</MainWrapper>;
+  return (
+    <Router>
+      <Switch>
+        <MainWrapper>
+          <Route exact path="/">
+            <LandingPage />
+          </Route>
+          <Route>
+            <Redirect to="/" />
+          </Route>
+        </MainWrapper>
+      </Switch>
+    </Router>
+  );
 }
