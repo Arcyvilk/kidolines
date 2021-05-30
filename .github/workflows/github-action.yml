@@ -1,0 +1,12 @@
+name: Deploy to GitHub pages
+'on':
+  push:
+    branches:
+      - master
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: yarn run deploy
+      - run: echo "🍏 This job's status is ${{ job.status }}."
