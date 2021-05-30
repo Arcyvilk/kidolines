@@ -19,7 +19,7 @@ interface SectionProps {
   column?: boolean;
 }
 export const Section = styled.div.attrs((props: SectionProps) => {
-  const style: any = {
+  const style: React.CSSProperties = {
     backgroundColor: colors.secondary,
     color: colors.primary,
     flexDirection: 'row',
