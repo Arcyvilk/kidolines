@@ -3,10 +3,21 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 import styled from 'styled-components';
 import { AppContext } from '../../shared/context';
-import { app1, app2, app3, main3 } from '../../shared/img';
+import {
+  app1,
+  app2,
+  app3,
+  main3,
+  kid,
+  mascot,
+  story1,
+  story2,
+  story3,
+  story4,
+} from '../../shared/img';
 import { colors, fonts } from '../../shared/theme';
-import { Flex } from '../../components';
-import { Wrapper, Section, PhoneShot } from './components';
+import { Flex, StoreButtons } from '../../components';
+import { Wrapper, PhoneShot, Section } from './components';
 import Header from './Header';
 import Footer from './Footer';
 
@@ -29,21 +40,21 @@ const Title = styled.div`
   text-align: center;
   line-height: 0.8em;
 `;
-const StartButton = styled.button`
-  font-family: ${fonts.main};
-  padding: 12px 32px;
-  border: 2px solid ${colors.primary};
-  background-color: ${colors.primary};
-  color: ${colors.secondary};
-  font-size: 18px;
-  font-weight: bold;
-  border-radius: 64px;
-  cursor: pointer;
-  margin-top: 24px;
-  opacity: 0.8;
+const Picture = styled.img`
+  height: 250px;
+  opacity: 0.9;
   &:hover {
     opacity: 1;
   }
+`;
+const List = styled.div`
+  width: 100%;
+  color: ${colors.primary};
+  font-weight: bold;
+  font-family: ${fonts.titles};
+  font-size: 2em;
+  letter-spacing: 0.1em;
+  text-align: center;
 `;
 
 export default function LandingPage(): JSX.Element {
@@ -53,25 +64,80 @@ export default function LandingPage(): JSX.Element {
       <Header />
       <Cover column align justify>
         <Title>{localization.header}</Title>
-        <StartButton>{localization.startButton}</StartButton>
+        <Flex row align justify>
+          <StoreButtons />
+        </Flex>
       </Cover>
-      <Section>
-        <Carousel
-          width="350px"
-          dynamicHeight
-          showArrows
-          showThumbs={false}
-          showStatus={false}
-          autoPlay
-          stopOnHover
-          swipeable
-          emulateTouch
-          infiniteLoop>
-          <PhoneShot src={app1} />
-          <PhoneShot src={app2} />
-          <PhoneShot src={app3} />
-        </Carousel>
+      <Flex
+        row
+        align
+        style={{ justifyContent: 'space-evenly', padding: '24px' }}>
+        <Flex column>
+          <Section>
+            <Picture src={mascot} alt="Our mascot" />
+          </Section>
+          <Section>
+            <Picture src={kid} alt="Happy girl" />
+          </Section>
+        </Flex>
+        <Flex column>
+          <Section style={{ marginRight: '64px' }}>
+            <List>over 50 traditional fables</List>
+          </Section>
+          <Section style={{ marginLeft: '64px' }}>
+            <List>beautiful artworks</List>
+          </Section>
+          <Section style={{ marginRight: '64px' }}>
+            <List>immersive voice acting</List>
+          </Section>
+        </Flex>
+        <Section>
+          <Carousel
+            width="350px"
+            dynamicHeight
+            showArrows
+            showThumbs={false}
+            showStatus={false}
+            autoPlay
+            stopOnHover
+            swipeable
+            emulateTouch
+            infiniteLoop>
+            <PhoneShot src={app1} />
+            <PhoneShot src={app2} />
+            <PhoneShot src={app3} />
+          </Carousel>
+        </Section>
+      </Flex>
+      <Section column justify align>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed
+          dui mauris. Proin vehicula at dui ac facilisis. Sed feugiat mi at
+          libero euismod, luctus euismod nisl placerat. In consequat quis tellus
+          eget placerat.
+        </p>
+        <p>Nam vitae tellus dapibus, consectetur nisi ut, placerat neque</p>
+        <p>
+          Quisque id ultrices ligula. Quisque ut mauris malesuada, dictum nisi
+          at, commodo odio. Maecenas dictum erat a arcu mollis vehicula. Etiam
+          finibus est ac facilisis vulputate. Duis suscipit enim at massa
+          sollicitudin pharetra.
+        </p>
       </Section>
+      <Flex row justify align>
+        <Section>
+          <Picture src={story1} alt="Example story picture 1" />
+        </Section>
+        <Section>
+          <Picture src={story2} alt="Example story picture 2" />
+        </Section>
+        <Section>
+          <Picture src={story3} alt="Example story picture 3" />
+        </Section>
+        <Section>
+          <Picture src={story4} alt="Example story picture 4" />
+        </Section>
+      </Flex>
       <Footer />
     </Wrapper>
   );

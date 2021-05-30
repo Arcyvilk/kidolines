@@ -14,6 +14,7 @@ export const Wrapper = styled(Flex)`
 `;
 
 export const Section = styled(Flex)`
+  flex-wrap: wrap;
   margin: 16px;
   padding: 16px;
   border-radius: 8px;
