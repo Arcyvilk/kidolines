@@ -42,13 +42,15 @@ export const texts: { [countryCode in CountryCodeType]: Localization } = {
   RS: {
     header: 'Потакните радозналост вашег детета са нашом колекцијом басни.',
     title: 'KIDOLINES',
-    subtitle: 'Kidolines - play and learn!',
+    subtitle: 'Kidolines - играјте се и учите!',
     startButton: 'Почети!',
     keyword1: 'преко 50 традиционалних басни',
     keyword2: 'прелепа уметничка дела',
     keyword3: 'уроњива глумачка глума',
-    desc1: 'test',
-    desc2: 'test',
+    desc1:
+      'Апликација са колекцијом лепих, илустрованих басни, заједно са професионалним гласовним приповедањем.',
+    desc2:
+      'Учите своју децу како читати и писати, истовремено се забављајући са својим новим пријатељима животињама!',
     desc3: 'test',
     longDesc1:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed dui mauris. Proin vehicula at dui ac facilisis. Sed feugiat mi at libero euismod, luctus euismod nisl placerat. In consequat quis tellus eget placerat.',
