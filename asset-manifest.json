@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/kidolines/static/css/main.462199d2.chunk.css",
+    "main.js": "/kidolines/static/js/main.dd7e1ef9.chunk.js",
+    "main.js.map": "/kidolines/static/js/main.dd7e1ef9.chunk.js.map",
+    "runtime-main.js": "/kidolines/static/js/runtime-main.dbfbee0b.js",
+    "runtime-main.js.map": "/kidolines/static/js/runtime-main.dbfbee0b.js.map",
+    "static/css/2.4ce9e501.chunk.css": "/kidolines/static/css/2.4ce9e501.chunk.css",
+    "static/js/2.c50a7939.chunk.js": "/kidolines/static/js/2.c50a7939.chunk.js",
+    "static/js/2.c50a7939.chunk.js.map": "/kidolines/static/js/2.c50a7939.chunk.js.map",
+    "index.html": "/kidolines/index.html",
+    "static/css/2.4ce9e501.chunk.css.map": "/kidolines/static/css/2.4ce9e501.chunk.css.map",
+    "static/css/main.462199d2.chunk.css.map": "/kidolines/static/css/main.462199d2.chunk.css.map",
+    "static/js/2.c50a7939.chunk.js.LICENSE.txt": "/kidolines/static/js/2.c50a7939.chunk.js.LICENSE.txt",
+    "static/media/Konj_i_svinja1.15d98d2d.png": "/kidolines/static/media/Konj_i_svinja1.15d98d2d.png",
+    "static/media/Konj_i_svinja2.8fb45182.png": "/kidolines/static/media/Konj_i_svinja2.8fb45182.png",
+    "static/media/Konj_i_svinja4.51067e55.png": "/kidolines/static/media/Konj_i_svinja4.51067e55.png",
+    "static/media/Konj_i_svinja6.fdeb9652.png": "/kidolines/static/media/Konj_i_svinja6.fdeb9652.png",
+    "static/media/app1.759e8284.jpg": "/kidolines/static/media/app1.759e8284.jpg",
+    "static/media/app2.2de38fa9.jpg": "/kidolines/static/media/app2.2de38fa9.jpg",
+    "static/media/app3.5ad0835e.jpg": "/kidolines/static/media/app3.5ad0835e.jpg",
+    "static/media/applestore.8c4986ee.svg": "/kidolines/static/media/applestore.8c4986ee.svg",
+    "static/media/googleplay.f902960a.png": "/kidolines/static/media/googleplay.f902960a.png",
+    "static/media/kid.49fc59e3.jpg": "/kidolines/static/media/kid.49fc59e3.jpg",
+    "static/media/main.e3a96da5.jpg": "/kidolines/static/media/main.e3a96da5.jpg",
+    "static/media/main2.e8595a33.png": "/kidolines/static/media/main2.e8595a33.png",
+    "static/media/main3.d5830fb9.png": "/kidolines/static/media/main3.d5830fb9.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.dbfbee0b.js",
+    "static/css/2.4ce9e501.chunk.css",
+    "static/js/2.c50a7939.chunk.js",
+    "static/css/main.462199d2.chunk.css",
+    "static/js/main.dd7e1ef9.chunk.js"
+  ]
+}
