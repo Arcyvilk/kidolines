@@ -6,11 +6,12 @@ type Props = {
   justify?: boolean;
   align?: boolean;
   grow?: boolean;
+  wrap?: boolean;
   style?: React.CSSProperties;
 };
 
 export const Flex = styled.div.attrs((props: Props) => {
-  const { row, column, justify, align, style } = props;
+  const { row, column, justify, align, wrap, style } = props;
   const newStyle = { ...style };
   if (row) {
     newStyle.flexDirection = 'row';
@@ -23,6 +24,9 @@ export const Flex = styled.div.attrs((props: Props) => {
   }
   if (align) {
     newStyle.alignItems = 'center';
+  }
+  if (wrap) {
+    newStyle.flexWrap = 'wrap';
   }
   return {
     style: newStyle,

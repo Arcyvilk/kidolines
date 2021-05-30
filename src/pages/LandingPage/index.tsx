@@ -30,6 +30,10 @@ const Cover = styled(Flex)`
   background-repeat: no-repeat;
   background-position: center;
   box-shadow: inset 0 0 20px 20px ${colors.secondary};
+
+  @media (max-device-width: 900px) {
+    background-size: cover;
+  }
 `;
 const Title = styled.div`
   color: ${colors.primary};
@@ -49,12 +53,17 @@ const Picture = styled.img`
 `;
 const List = styled.div`
   width: 100%;
-  color: ${colors.primary};
   font-weight: bold;
   font-family: ${fonts.titles};
   font-size: 2em;
   letter-spacing: 0.1em;
   text-align: center;
+`;
+const SubTitle = styled.h3`
+  font-family: ${fonts.titles};
+  color: ${colors.primary};
+  letter-spacing: 0.1em;
+  font-size: 1.7em;
 `;
 
 export default function LandingPage(): JSX.Element {
@@ -68,11 +77,22 @@ export default function LandingPage(): JSX.Element {
           <StoreButtons />
         </Flex>
       </Cover>
+      <Flex column align justify>
+        <SubTitle>{localization.subtitle}</SubTitle>
+        <Section
+          gradient
+          column
+          style={{ alignItems: 'center', justifyContent: 'center' }}>
+          <Flex>{localization.desc1}</Flex>
+          <Flex>{localization.desc2}</Flex>
+        </Section>
+      </Flex>
       <Flex
         row
         align
+        wrap
         style={{ justifyContent: 'space-evenly', padding: '24px' }}>
-        <Flex column>
+        <Flex column wrap>
           <Section>
             <Picture src={mascot} alt="Our mascot" />
           </Section>
@@ -80,15 +100,15 @@ export default function LandingPage(): JSX.Element {
             <Picture src={kid} alt="Happy girl" />
           </Section>
         </Flex>
-        <Flex column>
-          <Section style={{ marginRight: '64px' }}>
-            <List>over 50 traditional fables</List>
+        <Flex column wrap>
+          <Section style={{ marginRight: '64px' }} gradient>
+            <List>{localization.keyword1}</List>
           </Section>
-          <Section style={{ marginLeft: '64px' }}>
-            <List>beautiful artworks</List>
+          <Section style={{ marginLeft: '64px' }} gradient>
+            <List>{localization.keyword2}</List>
           </Section>
-          <Section style={{ marginRight: '64px' }}>
-            <List>immersive voice acting</List>
+          <Section style={{ marginRight: '64px' }} gradient>
+            <List>{localization.keyword3}</List>
           </Section>
         </Flex>
         <Section>
@@ -109,22 +129,14 @@ export default function LandingPage(): JSX.Element {
           </Carousel>
         </Section>
       </Flex>
-      <Section column justify align>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed
-          dui mauris. Proin vehicula at dui ac facilisis. Sed feugiat mi at
-          libero euismod, luctus euismod nisl placerat. In consequat quis tellus
-          eget placerat.
-        </p>
-        <p>Nam vitae tellus dapibus, consectetur nisi ut, placerat neque</p>
-        <p>
-          Quisque id ultrices ligula. Quisque ut mauris malesuada, dictum nisi
-          at, commodo odio. Maecenas dictum erat a arcu mollis vehicula. Etiam
-          finibus est ac facilisis vulputate. Duis suscipit enim at massa
-          sollicitudin pharetra.
-        </p>
+      <Section
+        column
+        style={{ alignItems: 'center', justifyContent: 'center' }}>
+        <p>{localization.longDesc1}</p>
+        <p>{localization.longDesc2}</p>
+        <p>{localization.longDesc3}</p>
       </Section>
-      <Flex row justify align>
+      <Flex row justify align wrap>
         <Section>
           <Picture src={story1} alt="Example story picture 1" />
         </Section>

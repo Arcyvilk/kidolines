@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { CountryCode, Localization, texts } from '../localization';
+import { CountryCodeType, Localization, texts } from '../localization';
 
 type ContextType = {
-  countryCode: CountryCode;
-  setCountryCode: (countryCode: CountryCode) => void;
+  countryCode: CountryCodeType;
+  setCountryCode: (countryCode: CountryCodeType) => void;
   localization: Localization;
   setLocalization: (localization: Localization) => void;
 };
@@ -13,7 +13,7 @@ type Props = {
 
 const AppContextProvider = ({ children }: Props): JSX.Element => {
   const defaultLocalization = 'GB';
-  const [countryCode, setCountryCode] = useState<CountryCode>(
+  const [countryCode, setCountryCode] = useState<CountryCodeType>(
     defaultLocalization,
   );
   const [localization, setLocalization] = useState<Localization>(

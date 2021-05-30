@@ -12,9 +12,9 @@ export const Wrapper = styled(Flex)`
 
 export default function Footer(): JSX.Element {
   return (
-    <Wrapper column align justify>
-      <Flex row align justify style={{ marginBottom: '32px' }}>
-        <Flex column align justify style={{ margin: '0 32px' }}>
+    <Wrapper column align wrap justify>
+      <Flex row align justify wrap style={{ marginBottom: '32px' }}>
+        <Flex column align justify wrap style={{ margin: '0 32px' }}>
           <h3>Contact us!</h3>
           <ul>
             <li>tel. +11 111 222 333</li>
@@ -26,7 +26,7 @@ export default function Footer(): JSX.Element {
           <StoreButtons />
         </Flex>
       </Flex>
-      <Flex row align justify>
+      <Flex row align justify wrap>
         © Copyright. All rights reserved | Coded by Arcyvilk
         {/* <a
           href="https://www.linkedin.com/in/annagadacz/"

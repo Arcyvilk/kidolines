@@ -3,7 +3,7 @@ import ReactFlagsSelect from 'react-flags-select';
 import styled from 'styled-components';
 import { AppContext } from '../../shared/context';
 import { fonts, colors } from '../../shared/theme';
-import { CountryCode } from '../../shared/localization';
+import { CountryCode, CountryCodeType } from '../../shared/localization';
 import { Gradient } from '../../components';
 
 export const Wrapper = styled(Gradient)`
@@ -23,6 +23,11 @@ const Title = styled.h1`
   letter-spacing: 0.1em;
   color: ${colors.secondary};
 `;
+const StyledReactFlagsSelect = styled(ReactFlagsSelect)`
+  #rfs-btn {
+    background-color: ${colors.secondary};
+  }
+`;
 
 export default function Header(): JSX.Element {
   const { localization } = useContext(AppContext);
@@ -37,11 +42,11 @@ export default function Header(): JSX.Element {
 const LanguageChoice = () => {
   const { countryCode, setCountryCode } = useContext(AppContext);
   return (
-    <ReactFlagsSelect
-      countries={['GB', 'RS']}
-      customLabels={{ GB: 'english', RS: 'serbian' }}
+    <StyledReactFlagsSelect
+      countries={CountryCode}
+      customLabels={{ GB: 'english', RS: 'serbian', PL: 'polish' }}
       selected={countryCode}
-      onSelect={contryCode => setCountryCode(contryCode as CountryCode)}
+      onSelect={contryCode => setCountryCode(contryCode as CountryCodeType)}
     />
   );
 };
