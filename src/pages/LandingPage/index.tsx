@@ -1,124 +1,78 @@
 import React from 'react';
-import {
-  BGImg1,
-  BGImg2,
-  BGImg3,
-  BGImg4,
-  TextSection,
-  Caption,
-} from './components';
-import { Gradient, Flex } from '../../components';
-import kidoguy from '../../shared/img/dudebro.jpg';
+import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
+import styled from 'styled-components';
+import { app1, app2, app3, main3 } from '../../shared/img';
+import { colors, fonts } from '../../shared/theme';
+import { Flex } from '../../components';
+import { Wrapper, Section, PhoneShot } from './components';
+import Header from './Header';
+import Footer from './Footer';
+
+const Cover = styled(Flex)`
+  width: 100%;
+  height: 800px;
+  background-color: #fff;
+  background-image: url(${main3});
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: inset 0 0 20px 20px ${colors.secondary};
+`;
+const Title = styled.div`
+  color: ${colors.primary};
+  font-family: ${fonts.titles};
+  font-size: 48px;
+  margin-top: -2em;
+  max-width: 500px;
+  text-align: center;
+  line-height: 0.8em;
+`;
+const Button = styled.button`
+  font-family: ${fonts.main};
+  padding: 12px 32px;
+  border: 2px solid ${colors.primary};
+  background-color: ${colors.primary};
+  color: ${colors.secondary};
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 64px;
+  cursor: pointer;
+  margin-top: 16px;
+  opacity: 0.8;
+  &:hover {
+    opacity: 1;
+  }
+`;
 
 export default function LandingPage(): JSX.Element {
   return (
-    <div style={{ height: '100%', margin: 0 }}>
-      <Gradient>KIDOLINES</Gradient>
-      <BGImg1 />
-
-      <TextSection>
-        <h3 style={{ textAlign: 'center' }}>Kidolines</h3>
-        <Flex row>
-          <img src={kidoguy} alt="kidolines" />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-            facilisis felis sit amet ligula imperdiet, ut egestas tellus
-            consequat. Ut ut nisi sit amet nulla aliquet suscipit vestibulum at
-            augue. Praesent placerat magna eu facilisis interdum. Donec
-            vestibulum sem eget turpis maximus, a commodo ex laoreet. In ac nisi
-            ultricies, consequat diam eget, imperdiet enim. Praesent sagittis
-            vitae ipsum in laoreet. Interdum et malesuada fames ac ante ipsum
-            primis in faucibus. Cras sed tincidunt quam. Nullam vulputate id
-            nisl quis semper. Nunc ipsum lacus, pretium a pulvinar eget, egestas
-            ut metus. Quisque ultricies ligula in fermentum mattis. Donec
-            vestibulum non nunc at convallis. Curabitur et pellentesque magna.
-            Ut eget sodales nisl. Etiam ac tellus varius, laoreet lectus at,
-            gravida orci.
-          </p>
-        </Flex>
-      </TextSection>
-
-      <BGImg2>
-        <Caption>
-          <span>Lorem Ipsum</span>
-        </Caption>
-      </BGImg2>
-
-      <div style={{ position: 'relative' }}>
-        <TextSection>
-          <p>
-            Nullam eget fermentum nisl, in egestas dolor. Phasellus varius,
-            tellus sed gravida facilisis, augue ex placerat nulla, vitae tempus
-            odio nisl nec augue. In neque sapien, malesuada in sem id, rutrum
-            porttitor est. Sed nec elit eu eros imperdiet pulvinar. Etiam
-            finibus dui nec sagittis mattis.
-          </p>
-        </TextSection>
-      </div>
-
-      <BGImg3>
-        <Caption>
-          <span>TEST</span>
-        </Caption>
-      </BGImg3>
-
-      <div style={{ position: 'relative' }}>
-        <TextSection>
-          <p>
-            Nullam nisi tellus, gravida sed pulvinar nec, dapibus id velit.
-            Pellentesque feugiat mauris quis vestibulum vestibulum. Proin at
-            arcu cursus, aliquam eros at, egestas tortor. Suspendisse pharetra
-            lectus a tellus vulputate, nec fermentum metus sagittis. Praesent
-            euismod tincidunt varius. Maecenas vel lorem convallis, accumsan mi
-            auctor, aliquet urna. Phasellus nec lacinia enim. Pellentesque
-            facilisis sit amet quam id gravida. Suspendisse venenatis pretium
-            libero, ut faucibus orci porttitor eu. Aliquam tempor dignissim
-            porta.
-          </p>
-        </TextSection>
-      </div>
-
-      <BGImg4>
-        <Caption>
-          <span>TEST</span>
-        </Caption>
-      </BGImg4>
-
-      <div style={{ position: 'relative' }}>
-        <TextSection>
-          <p>
-            In in gravida risus. Vivamus libero urna, posuere ac iaculis eu,
-            vehicula ac orci. Ut diam turpis, imperdiet et nulla nec, eleifend
-            pretium tortor. Curabitur in tortor et mauris tempor varius.
-            Curabitur facilisis lorem ut ligula consequat molestie. Fusce mi
-            quam, consequat eu lectus vitae, tincidunt pellentesque mauris.
-          </p>
-        </TextSection>
-      </div>
-
-      <Gradient style={{ padding: '40px' }}>
-        <Flex row>
-          <div>
-            <h3>Resources</h3>
-            <ul>
-              <li>Home</li>
-              <li>Page</li>
-              <li>Portfolio</li>
-              <li>Blog</li>
-              <li>Contact</li>
-            </ul>
-          </div>
-          <div>
-            <h3>Contact</h3>
-            <ul>
-              <li>+00 111 222 333</li>
-              <li>email@email.com</li>
-              <li>kidolines.app</li>
-              <li>Street 2, City, Some Country</li>
-            </ul>
-          </div>
-        </Flex>
-      </Gradient>
-    </div>
+    <Wrapper column>
+      <Header />
+      <Cover column align justify>
+        <Title>
+          Spark your child&apos;s curiosity with a collection of fables.
+        </Title>
+        <Button>Start</Button>
+      </Cover>
+      <Section>
+        <Carousel
+          width="350px"
+          dynamicHeight
+          showArrows
+          showThumbs={false}
+          showStatus={false}
+          autoPlay
+          stopOnHover
+          swipeable
+          emulateTouch
+          infiniteLoop>
+          <PhoneShot src={app1} />
+          <PhoneShot src={app2} />
+          <PhoneShot src={app3} />
+        </Carousel>
+      </Section>
+      <Footer />
+    </Wrapper>
   );
 }
