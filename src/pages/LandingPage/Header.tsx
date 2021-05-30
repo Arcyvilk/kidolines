@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import ReactFlagsSelect from 'react-flags-select';
 import styled from 'styled-components';
+import { AppContext } from '../../shared/context';
 import { fonts, colors } from '../../shared/theme';
-import { Gradient, StoreButtons } from '../../components';
+import { CountryCode } from '../../shared/localization';
+import { Gradient } from '../../components';
 
 export const Wrapper = styled(Gradient)`
   width: 100%;
@@ -22,10 +25,23 @@ const Title = styled.h1`
 `;
 
 export default function Header(): JSX.Element {
+  const { localization } = useContext(AppContext);
   return (
     <Wrapper>
-      <Title>Kidolines</Title>
-      <StoreButtons />
+      <Title>{localization.title}</Title>
+      <LanguageChoice />
     </Wrapper>
   );
 }
+
+const LanguageChoice = () => {
+  const { countryCode, setCountryCode } = useContext(AppContext);
+  return (
+    <ReactFlagsSelect
+      countries={['GB', 'RS']}
+      customLabels={{ GB: 'english', RS: 'serbian' }}
+      selected={countryCode}
+      onSelect={contryCode => setCountryCode(contryCode as CountryCode)}
+    />
+  );
+};

@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import styled from 'styled-components';
+import { AppContext } from '../../shared/context';
 import { app1, app2, app3, main3 } from '../../shared/img';
 import { colors, fonts } from '../../shared/theme';
 import { Flex } from '../../components';
@@ -24,11 +25,11 @@ const Title = styled.div`
   font-family: ${fonts.titles};
   font-size: 48px;
   margin-top: -2em;
-  max-width: 500px;
+  max-width: 550px;
   text-align: center;
   line-height: 0.8em;
 `;
-const Button = styled.button`
+const StartButton = styled.button`
   font-family: ${fonts.main};
   padding: 12px 32px;
   border: 2px solid ${colors.primary};
@@ -38,7 +39,7 @@ const Button = styled.button`
   font-weight: bold;
   border-radius: 64px;
   cursor: pointer;
-  margin-top: 16px;
+  margin-top: 24px;
   opacity: 0.8;
   &:hover {
     opacity: 1;
@@ -46,14 +47,13 @@ const Button = styled.button`
 `;
 
 export default function LandingPage(): JSX.Element {
+  const { localization } = useContext(AppContext);
   return (
     <Wrapper column>
       <Header />
       <Cover column align justify>
-        <Title>
-          Spark your child&apos;s curiosity with a collection of fables.
-        </Title>
-        <Button>Start</Button>
+        <Title>{localization.header}</Title>
+        <StartButton>{localization.startButton}</StartButton>
       </Cover>
       <Section>
         <Carousel
