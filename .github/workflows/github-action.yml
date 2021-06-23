@@ -11,5 +11,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: git config --global user.name ${{ secrets.REACT_APP_USERNAME }}
+      - run: git config --global user.email ${{ secrets.REACT_APP_EMAIL }}
       - run: yarn run deploy
       - run: echo "🍏 This job's status is ${{ job.status }}."
