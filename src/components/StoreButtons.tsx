@@ -13,11 +13,19 @@ const Wrapper = styled.div`
     margin: 4px;
     cursor: pointer;
   }
+  @media (min-width: 1300px) {
+    display: ${({ mobile }: { mobile?: boolean }) =>
+      mobile === true ? 'none' : 'flex'};
+  }
+  @media (max-width: 1300px) {
+    display: ${({ mobile }: { mobile?: boolean }) =>
+      mobile === false ? 'none' : 'flex'};
+  }
 `;
 
-export const StoreButtons = (): JSX.Element => {
+export const StoreButtons = ({ mobile }: { mobile?: boolean }): JSX.Element => {
   return (
-    <Wrapper>
+    <Wrapper mobile={mobile}>
       <img src={buttonApple} alt="apple-store-button" />
       <img
         src={buttonGoogle}

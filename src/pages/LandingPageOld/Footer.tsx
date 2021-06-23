@@ -12,23 +12,8 @@ export const Wrapper = styled(Flex)`
 
 export default function Footer(): JSX.Element {
   return (
-    <Wrapper column align justify wrap>
-      <Flex
-        row
-        justify
-        wrap
-        style={{ marginBottom: '32px', alignItems: 'flex-start' }}>
-        <Flex column align justify wrap style={{ margin: '0 32px' }}>
-          <h3>ToS</h3>
-          <p>text text text</p>
-        </Flex>
-        <Flex column align justify wrap style={{ margin: '0 32px' }}>
-          <h3>Privacy policy</h3>
-          <p>text text text</p>
-        </Flex>
-        <Flex column align justify>
-          <StoreButtons />
-        </Flex>
+    <Wrapper column align wrap justify>
+      <Flex row align justify wrap style={{ marginBottom: '32px' }}>
         <Flex column align justify wrap style={{ margin: '0 32px' }}>
           <h3>Contact us!</h3>
           <ul>
@@ -36,6 +21,9 @@ export default function Footer(): JSX.Element {
             <li>info@kidolines.app</li>
             <li>Street 2, 1729 City</li>
           </ul>
+        </Flex>
+        <Flex column align justify>
+          <StoreButtons />
         </Flex>
       </Flex>
       <Flex row align justify wrap>

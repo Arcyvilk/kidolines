@@ -12,7 +12,7 @@ type Props = {
 };
 
 const AppContextProvider = ({ children }: Props): JSX.Element => {
-  const defaultLocalization = 'GB';
+  const defaultLocalization = 'RS';
   const [countryCode, setCountryCode] = useState<CountryCodeType>(
     defaultLocalization,
   );

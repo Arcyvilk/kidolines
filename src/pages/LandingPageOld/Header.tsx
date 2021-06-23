@@ -44,7 +44,7 @@ const LanguageChoice = () => {
   return (
     <StyledReactFlagsSelect
       countries={CountryCode}
-      customLabels={{ RS: 'serbian', GB: 'english' }}
+      customLabels={{ GB: 'english', RS: 'serbian', PL: 'polish' }}
       selected={countryCode}
       onSelect={contryCode => setCountryCode(contryCode as CountryCodeType)}
     />

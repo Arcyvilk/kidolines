@@ -1,4 +1,4 @@
-export type CountryCodeType = 'GB' | 'RS' | 'PL';
+export type CountryCodeType = 'RS' | 'GB';
 export type TextType =
   | 'title'
   | 'subtitle'
@@ -17,11 +17,11 @@ export type Localization = {
   [textType in TextType]: string;
 };
 
-export const CountryCode: CountryCodeType[] = ['GB', 'RS', 'PL'];
+export const CountryCode: CountryCodeType[] = ['RS', 'GB'];
 export const texts: { [countryCode in CountryCodeType]: Localization } = {
   GB: {
     // eslint-disable-next-line prettier/prettier
-    header: 'Spark your child\'s curiosity with our collection of fables.',
+    header: 'KIDOLINES',
     title: 'KIDOLINES',
     subtitle: 'Kidolines - play and learn!',
     startButton: 'Begin!',
@@ -34,13 +34,13 @@ export const texts: { [countryCode in CountryCodeType]: Localization } = {
       'Teaching your children how to read and write, having fun with their new animal friends at the same time!',
     desc3: 'test',
     longDesc1:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed dui mauris. Proin vehicula at dui ac facilisis. Sed feugiat mi at libero euismod, luctus euismod nisl placerat. In consequat quis tellus eget placerat.',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed dui mauris. Proin vehicula at dui ac facilisis. Sed feugiat mi at libero euismod, luctus euismod nisl placerat. In consequat quis tellus eget placerat. Quisque id ultrices ligula. Quisque ut mauris malesuada, dictum nisi at, commodo odio. Maecenas dictum erat a arcu mollis vehicula. Etiam finibus est ac facilisis vulputate. Duis suscipit enim at massa sollicitudin pharetra.',
     longDesc2: 'Nam vitae tellus dapibus, consectetur nisi ut, placerat neque',
     longDesc3:
       'Quisque id ultrices ligula. Quisque ut mauris malesuada, dictum nisi at, commodo odio. Maecenas dictum erat a arcu mollis vehicula. Etiam finibus est ac facilisis vulputate. Duis suscipit enim at massa sollicitudin pharetra.',
   },
   RS: {
-    header: 'Потакните радозналост вашег детета са нашом колекцијом басни.',
+    header: 'KIDOLINES',
     title: 'KIDOLINES',
     subtitle: 'Kidolines - играјте се и учите!',
     startButton: 'Почети!',
@@ -53,26 +53,7 @@ export const texts: { [countryCode in CountryCodeType]: Localization } = {
       'Учите своју децу како читати и писати, истовремено се забављајући са својим новим пријатељима животињама!',
     desc3: 'test',
     longDesc1:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed dui mauris. Proin vehicula at dui ac facilisis. Sed feugiat mi at libero euismod, luctus euismod nisl placerat. In consequat quis tellus eget placerat.',
-    longDesc2: 'Nam vitae tellus dapibus, consectetur nisi ut, placerat neque',
-    longDesc3:
-      'Quisque id ultrices ligula. Quisque ut mauris malesuada, dictum nisi at, commodo odio. Maecenas dictum erat a arcu mollis vehicula. Etiam finibus est ac facilisis vulputate. Duis suscipit enim at massa sollicitudin pharetra.',
-  },
-  PL: {
-    header: 'Rozbudź wyobraźnię swojego dziecka z naszą kolekcją baśni.',
-    title: 'KIDOLINES',
-    subtitle: 'Kidolines - baw się i ucz!',
-    startButton: 'Rozpocznij!',
-    keyword1: 'ponad 50 tradycyjnych baśni',
-    keyword2: 'piękne obrazki',
-    keyword3: 'wciągająca narracja głosowa',
-    desc1:
-      'Aplikacja z kolekcją pięknych, ilustrowanych baśni, czytanych przez profesjonalnych narratorów.',
-    desc2:
-      'Twoje dzieci będą się uczyć czytać i pisać, bawiąc się z ich nowymi zwierzęcymi przyjaciółmi!',
-    desc3: 'test',
-    longDesc1:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed dui mauris. Proin vehicula at dui ac facilisis. Sed feugiat mi at libero euismod, luctus euismod nisl placerat. In consequat quis tellus eget placerat.',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed dui mauris. Proin vehicula at dui ac facilisis. Sed feugiat mi at libero euismod, luctus euismod nisl placerat. In consequat quis tellus eget placerat. Quisque id ultrices ligula. Quisque ut mauris malesuada, dictum nisi at, commodo odio. Maecenas dictum erat a arcu mollis vehicula. Etiam finibus est ac facilisis vulputate. Duis suscipit enim at massa sollicitudin pharetra.',
     longDesc2: 'Nam vitae tellus dapibus, consectetur nisi ut, placerat neque',
     longDesc3:
       'Quisque id ultrices ligula. Quisque ut mauris malesuada, dictum nisi at, commodo odio. Maecenas dictum erat a arcu mollis vehicula. Etiam finibus est ac facilisis vulputate. Duis suscipit enim at massa sollicitudin pharetra.',

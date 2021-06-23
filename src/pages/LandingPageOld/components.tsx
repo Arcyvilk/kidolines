@@ -51,21 +51,9 @@ export const PhoneShot = styled.img`
   box-shadow: 0 0 10px #ccc;
 `;
 
-export const CoverWrapper = styled(Flex)`
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  width: 100%;
-  @media (max-width: 1300px) {
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-`;
 export const Cover = styled(Flex)`
-  width: 60%;
-  max-width: 60%;
-  height: 600px;
+  width: 100%;
+  height: 800px;
   background-color: #fff;
   background-image: url(${main3});
   background-size: contain;
@@ -73,32 +61,15 @@ export const Cover = styled(Flex)`
   background-position: center;
   box-shadow: inset 0 0 20px 20px ${colors.secondary};
 
-  @media (max-width: 1300px) {
-    width: 100%;
-    max-width: 800px;
-    max-height: 600px;
+  @media (max-device-width: 900px) {
     background-size: cover;
   }
 `;
 
-export const CarouselWrapper = styled(Flex)`
-  width: 600px;
-  height: 700px;
-  padding: 24px 48px 0 0;
-  box-sizing: border-box;
-  @media (max-width: 1300px) {
-    padding: 4px 8px;
-  }
-  @media (max-width: 650px) {
-    width: 100%;
-    height: 700px;
-    padding: 4px 8px;
-  }
-`;
 export const Title = styled.div`
   color: ${colors.primary};
   font-family: ${fonts.titles};
-  font-size: 64px;
+  font-size: 48px;
   margin-top: -2em;
   max-width: 550px;
   text-align: center;
