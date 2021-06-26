@@ -4,13 +4,12 @@ import styled from 'styled-components';
 import { AppContext } from '../../shared/context';
 import { fonts, colors } from '../../shared/theme';
 import { CountryCode, CountryCodeType } from '../../shared/localization';
-import { Gradient } from '../../components';
+import { A, Gradient } from '../../components';
 
 export const Wrapper = styled(Gradient)`
   width: 100%;
   padding: 8px 16px;
   box-sizing: border-box;
-  position: sticky;
   top: -1px;
   justify-content: space-between;
   align-items: center;
@@ -33,18 +32,20 @@ export default function Header(): JSX.Element {
   const { localization } = useContext(AppContext);
   return (
     <Wrapper>
-      <Title>{localization.title}</Title>
-      <LanguageChoice />
+      <Title>
+        <A href="/">{localization.title}</A>
+      </Title>
+      {/* <LanguageChoice /> */}
     </Wrapper>
   );
 }
 
-const LanguageChoice = () => {
+export const LanguageChoice = (): JSX.Element => {
   const { countryCode, setCountryCode } = useContext(AppContext);
   return (
     <StyledReactFlagsSelect
       countries={CountryCode}
-      customLabels={{ GB: 'english', RS: 'serbian', PL: 'polish' }}
+      customLabels={{ RS: 'serbian', GB: 'english' }}
       selected={countryCode}
       onSelect={contryCode => setCountryCode(contryCode as CountryCodeType)}
     />

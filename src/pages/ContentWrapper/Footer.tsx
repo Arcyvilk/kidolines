@@ -1,9 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Flex, StoreButtons } from '../../components';
+import { A, Flex, StoreButtons } from '../../components';
 import { colors } from '../../shared/theme';
 
 export const Wrapper = styled(Flex)`
+  width: 100%;
+  box-sizing: border-box;
   background-color: ${colors.primary};
   color: ${colors.secondary};
   padding: 8px;
@@ -18,39 +20,38 @@ export default function Footer(): JSX.Element {
         justify
         wrap
         style={{ marginBottom: '32px', alignItems: 'flex-start' }}>
-        <Flex column align justify wrap style={{ margin: '0 32px' }}>
-          <h3>ToS</h3>
-          <p>text text text</p>
-        </Flex>
-        <Flex column align justify wrap style={{ margin: '0 32px' }}>
-          <h3>Privacy policy</h3>
-          <p>text text text</p>
-        </Flex>
         <Flex column align justify>
           <StoreButtons />
         </Flex>
         <Flex column align justify wrap style={{ margin: '0 32px' }}>
-          <h3>Contact us!</h3>
+          <h3>About us</h3>
           <ul>
-            <li>tel. +11 111 222 333</li>
-            <li>info@kidolines.app</li>
-            <li>Street 2, 1729 City</li>
+            <li>
+              <A href="/tos">Terms of Service</A>
+            </li>
+            <li>
+              <A href="/privacy">Privacy policy</A>
+            </li>
+          </ul>
+        </Flex>
+        <Flex column align justify wrap style={{ margin: '0 32px' }}>
+          <h3>Contact</h3>
+          <ul>
+            <li>info@kidolines.com</li>
           </ul>
         </Flex>
       </Flex>
       <Flex row align justify wrap>
-        © Copyright. All rights reserved | Coded by Arcyvilk
-        {/* <a
-          href="https://www.linkedin.com/in/annagadacz/"
+        © Copyright. All rights reserved | Coded by
+        <A
+          href="http://www.gada.cz"
           target="_blank"
           rel="noreferrer"
           style={{
             marginLeft: '4px',
-            color: colors.white,
-            textDecoration: 'none',
           }}>
-          Arcyvilk
-        </a> */}
+          gada.cz
+        </A>
       </Flex>
     </Wrapper>
   );

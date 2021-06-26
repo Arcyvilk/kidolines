@@ -2,28 +2,15 @@ import React, { useState, useContext } from 'react';
 import Carousel from 'react-spring-3d-carousel';
 import { v4 as uuid } from 'uuid';
 import { AppContext } from '../../shared/context';
+import { animacja, app1, app2, app3, main3 } from '../../shared/img';
+import { Flex, StoreButtons, Section } from '../../components';
 import {
-  app1,
-  app2,
-  app3,
-  story1,
-  story2,
-  story3,
-  story4,
-} from '../../shared/img';
-import { Flex, StoreButtons } from '../../components';
-import {
-  Wrapper,
   PhoneShot,
-  Section,
   Cover,
   CoverWrapper,
   CarouselWrapper,
-  Title,
   Picture,
 } from './components';
-import Header from './Header';
-import Footer from './Footer';
 
 export default function LandingPage(): JSX.Element {
   const { localization } = useContext(AppContext);
@@ -47,18 +34,16 @@ export default function LandingPage(): JSX.Element {
   });
 
   return (
-    <Wrapper column>
-      <Header />
+    <>
       <CoverWrapper>
-        <Cover column justify align>
-          <Title>{localization.header}</Title>
-          <Flex row align justify></Flex>
+        <Cover>
+          <img src={main3} />
         </Cover>
         <StoreButtons mobile={true} />
         <CarouselWrapper column>
           <Carousel
             slides={slides}
-            showNavigation={true}
+            showNavigation={false}
             goToSlide={activeSlide}
             offsetRadius={offsetRadius}
             animationConfig={{ tension: 120, friction: 14 }}
@@ -72,20 +57,25 @@ export default function LandingPage(): JSX.Element {
         <p>{localization.longDesc1}</p>
       </Section>
       <Flex row justify align wrap>
-        <Section>
-          <Picture src={story1} alt="Example story picture 1" />
-        </Section>
-        <Section>
-          <Picture src={story2} alt="Example story picture 2" />
-        </Section>
-        <Section>
-          <Picture src={story3} alt="Example story picture 3" />
-        </Section>
-        <Section>
-          <Picture src={story4} alt="Example story picture 4" />
-        </Section>
+        <Flex
+          align
+          justify
+          style={{
+            maxWidth: '500px',
+            margin: '16px',
+          }}>
+          <Picture
+            src={animacja}
+            alt="animation"
+            style={{
+              width: '90%',
+              height: 'auto',
+              borderRadius: '16px',
+              boxShadow: '0 0 10px #ccc',
+            }}
+          />
+        </Flex>
       </Flex>
-      <Footer />
-    </Wrapper>
+    </>
   );
 }

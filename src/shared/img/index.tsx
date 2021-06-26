@@ -1,3 +1,4 @@
+import animacja from './animacja.gif';
 import app1 from './app1.jpg';
 import app2 from './app2.jpg';
 import app3 from './app3.jpg';
@@ -15,6 +16,7 @@ import story3 from './story/Konj_i_svinja6.png';
 import story4 from './story/Konj_i_svinja1.png';
 
 export {
+  animacja,
   app1,
   app2,
   app3,
