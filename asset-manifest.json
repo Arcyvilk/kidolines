@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "/kidolines/static/css/main.462199d2.chunk.css",
-    "main.js": "/kidolines/static/js/main.218337bb.chunk.js",
-    "main.js.map": "/kidolines/static/js/main.218337bb.chunk.js.map",
+    "main.css": "/kidolines/static/css/main.5017cb1b.chunk.css",
+    "main.js": "/kidolines/static/js/main.f2042b4d.chunk.js",
+    "main.js.map": "/kidolines/static/js/main.f2042b4d.chunk.js.map",
     "runtime-main.js": "/kidolines/static/js/runtime-main.b6f79213.js",
     "runtime-main.js.map": "/kidolines/static/js/runtime-main.b6f79213.js.map",
-    "static/js/2.155c9501.chunk.js": "/kidolines/static/js/2.155c9501.chunk.js",
-    "static/js/2.155c9501.chunk.js.map": "/kidolines/static/js/2.155c9501.chunk.js.map",
+    "static/js/2.3a133d5a.chunk.js": "/kidolines/static/js/2.3a133d5a.chunk.js",
+    "static/js/2.3a133d5a.chunk.js.map": "/kidolines/static/js/2.3a133d5a.chunk.js.map",
     "index.html": "/kidolines/index.html",
-    "static/css/main.462199d2.chunk.css.map": "/kidolines/static/css/main.462199d2.chunk.css.map",
-    "static/js/2.155c9501.chunk.js.LICENSE.txt": "/kidolines/static/js/2.155c9501.chunk.js.LICENSE.txt",
+    "static/css/main.5017cb1b.chunk.css.map": "/kidolines/static/css/main.5017cb1b.chunk.css.map",
+    "static/js/2.3a133d5a.chunk.js.LICENSE.txt": "/kidolines/static/js/2.3a133d5a.chunk.js.LICENSE.txt",
     "static/media/Konj_i_svinja1.15d98d2d.png": "/kidolines/static/media/Konj_i_svinja1.15d98d2d.png",
     "static/media/Konj_i_svinja2.8fb45182.png": "/kidolines/static/media/Konj_i_svinja2.8fb45182.png",
     "static/media/Konj_i_svinja4.51067e55.png": "/kidolines/static/media/Konj_i_svinja4.51067e55.png",
     "static/media/Konj_i_svinja6.fdeb9652.png": "/kidolines/static/media/Konj_i_svinja6.fdeb9652.png",
+    "static/media/animacja.9c97dbeb.gif": "/kidolines/static/media/animacja.9c97dbeb.gif",
     "static/media/app1.759e8284.jpg": "/kidolines/static/media/app1.759e8284.jpg",
     "static/media/app2.2de38fa9.jpg": "/kidolines/static/media/app2.2de38fa9.jpg",
     "static/media/app3.5ad0835e.jpg": "/kidolines/static/media/app3.5ad0835e.jpg",
@@ -22,12 +23,12 @@
     "static/media/kid.49fc59e3.jpg": "/kidolines/static/media/kid.49fc59e3.jpg",
     "static/media/main.e3a96da5.jpg": "/kidolines/static/media/main.e3a96da5.jpg",
     "static/media/main2.e8595a33.png": "/kidolines/static/media/main2.e8595a33.png",
-    "static/media/main3.d5830fb9.png": "/kidolines/static/media/main3.d5830fb9.png"
+    "static/media/main3.e9aae1dc.png": "/kidolines/static/media/main3.e9aae1dc.png"
   },
   "entrypoints": [
     "static/js/runtime-main.b6f79213.js",
-    "static/js/2.155c9501.chunk.js",
-    "static/css/main.462199d2.chunk.css",
-    "static/js/main.218337bb.chunk.js"
+    "static/js/2.3a133d5a.chunk.js",
+    "static/css/main.5017cb1b.chunk.css",
+    "static/js/main.f2042b4d.chunk.js"
   ]
 }
