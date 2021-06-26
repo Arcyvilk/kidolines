@@ -27,10 +27,10 @@ export default function Footer(): JSX.Element {
           <h3>About us</h3>
           <ul>
             <li>
-              <A href="/tos">Terms of Service</A>
+              <A href="/kidolines/tos">Terms of Service</A>
             </li>
             <li>
-              <A href="/privacy">Privacy policy</A>
+              <A href="/kidolines/privacy">Privacy policy</A>
             </li>
           </ul>
         </Flex>
