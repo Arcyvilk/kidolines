@@ -23,23 +23,23 @@ export default function App(): JSX.Element {
   return (
     <Router>
       <Switch>
-        <Route exact path="/">
+        <Route exact path="/kidolines">
           <ContentWrapper>
             <LandingPage />
           </ContentWrapper>
         </Route>
-        <Route exact path="/tos">
+        <Route exact path="/kidolines/tos">
           <ContentWrapper>
             <TOSPage />
           </ContentWrapper>
         </Route>
-        <Route exact path="/privacy">
+        <Route exact path="/kidolines/privacy">
           <ContentWrapper>
             <PrivacyPage />
           </ContentWrapper>
         </Route>
         <Route>
-          <Redirect to="/" />
+          <Redirect to="/kidolines" />
         </Route>
       </Switch>
     </Router>
